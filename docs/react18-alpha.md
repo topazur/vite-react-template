@@ -74,3 +74,11 @@ $ 配置package.json中的script
 # 强制安装可使用 `-f`或`--force` 参数
 $ yarn add react-router-dom @types/react-router-dom --force
 ```
+
+#### svg雪碧图
+
+```bash
+$ yarn add vite-plugin-svg-icons -D
+# Usage: https://github.com/anncwb/vite-plugin-svg-icons
+# 博客参考(addRoute、env、css预处理、alias、svg抽离plugins写法): https://blog.csdn.net/weixin_43368335/article/details/113868053
+```

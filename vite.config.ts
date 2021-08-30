@@ -2,6 +2,7 @@
 import path from "path"
 import { defineConfig } from "vite"
 import reactRefresh from "@vitejs/plugin-react-refresh"
+import svgBuilder from './src/plugins/svg-builder';
 
 /* https://vitejs.dev/config/ */
 export default defineConfig({
@@ -14,5 +15,6 @@ export default defineConfig({
   },
   plugins: [
     reactRefresh(),
+    svgBuilder(),
   ],
 })
