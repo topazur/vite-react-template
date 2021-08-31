@@ -1,0 +1,7 @@
+# ts typings
+*.d.ts
+
+#Local
+node_modules
+dist
+commitlint.config.js

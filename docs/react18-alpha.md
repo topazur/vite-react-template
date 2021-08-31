@@ -20,7 +20,7 @@ $ yarn add react@alpha react-dom@alpha
 
 ## 三、vite+react 构建
 
-### 3.1 vite模板创建
+### 3.1 vite 模板创建
 
 ```bash
 $ ❎ yarn create @vitejs/app [project] --template react-ts
@@ -32,8 +32,10 @@ $ yarn add react@alpha react-dom@alpha
 
 ### 3.2 tsconfig.json
 
-[vite typescript相关配置](https://cn.vitejs.dev/guide/features.html#typescript)
+[vite typescript 相关配置](https://cn.vitejs.dev/guide/features.html#typescript)
+
 ```json
+// vite 创建模板使用的默认配置：可能有些属性为了适配rollup，后续探索（TODO）
 {
   "compilerOptions": {
     "target": "ESNext",
@@ -75,10 +77,26 @@ $ 配置package.json中的script
 $ yarn add react-router-dom @types/react-router-dom --force
 ```
 
-#### svg雪碧图
+#### svg 雪碧图
 
 ```bash
 $ yarn add vite-plugin-svg-icons -D
 # Usage: https://github.com/anncwb/vite-plugin-svg-icons
+
 # 博客参考(addRoute、env、css预处理、alias、svg抽离plugins写法): https://blog.csdn.net/weixin_43368335/article/details/113868053
+# [此博文对应仓库](https://github.com/lwm98/Vue3-Template)
+```
+
+#### eslint for alloy
+
+```bash
+# https://www.npmjs.com/package/eslint-config-alloy
+# https://github.com/AlloyTeam/eslint-config-alloy
+$ yarn add eslint-config-alloy -D
+
+# [Rules配置 中文](https://alloyteam.github.io/eslint-config-alloy/?language=zh-CN)
+
+# 由此博文了解到这个eslint规范：
+# [Vite + React + Typescript 最佳实践](https://github.com/lichenbuliren/fe-project-base)
+# [对应仓库]https://segmentfault.com/a/1190000039875183)
 ```
