@@ -17,6 +17,11 @@ yarn.lock
 ## Local
 node_modules
 .husky
+commitlint.config.js
+.env
+.env.*
+.env.local
+.env.*.local
 
 ## Built-files
 .cache

@@ -4,4 +4,9 @@
 #Local
 node_modules
 dist
+.husky
 commitlint.config.js
+.env
+.env.*
+.env.local
+.env.*.local
