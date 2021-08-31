@@ -18,15 +18,26 @@ $ cd [project]
 $ yarn add react@alpha react-dom@alpha
 ```
 
-## 三、vite+react 构建
+## 三、vite2 + react18 构建
 
 ### 3.1 vite 模板创建
 
 ```bash
+## NPM
+# npm 6.x
+$ npm init @vitejs/app my-app --template react-ts
+# npm 7+, 需要额外的双横线：
+$ npm init @vitejs/app my-app -- --template react-ts
+# @vitejs/create-app is deprecated
+$ npm init vite-app <project-name>
+
+## YARN
+
 $ ❎ yarn create @vitejs/app [project] --template react-ts
 # @vitejs/create-app is deprecated, use yarn create vite instead
 $ ✅ yarn create vite [project] --template react-ts
 
+## add react18
 $ yarn add react@alpha react-dom@alpha
 ```
 
@@ -117,3 +128,49 @@ $ npx husky add .husky/pre-commit 'npx lint-staged'
 # .lintstagedrc.js
 # [React 项目中引入 Husky 6.x 和 Lint-staged](https://www.jianshu.com/p/a7cea983e7a2)
 ```
+
+## 四、vite2具体配置
+
+### 4.1 plugin
+
+#### 基础插件
+
+- @vitejs/plugin-react-refresh
+- vite-plugin-svg-icons
+
+#### [Vite 2.0 配置总结](https://juejin.cn/post/6966538055738097677)
+
+- vite-plugin-pwa
+- vite-plugin-style-import、vite-plugin-components [element plus按需加载](https://juejin.cn/post/6992131592873312263)
+- vite-plugin-compression
+- vite-plugin-mock
+
+##### [图片资源引入](https://juejin.cn/post/6989475484551610381)
+
+```js
+// 静态资源
+const imgUrl = new URL('./img.png', import.meta.url)
+import imgUrl from '@/img.png'
+```
+
+#### [Vite2 实战: React + TS + Mobx 旧项目迁移](http://www.qishunwang.net/news_show_77358.aspx)
+
+##### vite-plugin-imp
+##### @rollup/plugin-typescript
+
+> mobx装饰器报错
+
+```ts
+import typescript from "@rollup/plugin-typescript"
+typescript({
+  config: "./tsconfig.json"
+})
+```
+
+#### [使用 Vite2 构建 React + Antd 项目](https://www.jianshu.com/p/daf24cc23d80)
+
+- css 及 base属性
+
+### 4.2 CSS 预处理器
+
+> 由于Vite 提供了对 .scss, .sass, .less, .styl 和 .stylus 文件的内置支持。没有必要为他们安装特定的 vite 插件，只要npm i 预处理器就可以开箱即用，直呼真香！

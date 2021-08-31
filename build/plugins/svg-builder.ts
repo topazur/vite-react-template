@@ -1,7 +1,8 @@
-import viteSvgIcons from 'vite-plugin-svg-icons'
 import path from 'path'
+import viteSvgIcons from 'vite-plugin-svg-icons'
 
 /**
+ * @title svg雪碧图插件
  * process.cwd() 方法返回 Node.js 进程的当前工作目录
  */
 export default (Dirs?: string[]) => {

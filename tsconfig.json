@@ -16,7 +16,7 @@
       "ESNext"
     ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
     "jsx": "react" /* Specify what JSX code is generated. */,
-    // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
+    "experimentalDecorators": true /* Enable experimental support for TC39 stage 2 draft decorators. */,
     // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
     // "jsxFactory": "",                                 /* Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h' */
     // "jsxFragmentFactory": "",                         /* Specify the JSX Fragment reference used for fragments when targeting React JSX emit e.g. 'React.Fragment' or 'Fragment'. */
@@ -34,6 +34,7 @@
     // "typeRoots": [],                                  /* Specify multiple folders that act like `./node_modules/@types`. */
     // 额外的类型声明文件
     "types": [
+      "vite/client",
       "react/next",
       "react-dom/next",
       "node"
@@ -77,14 +78,14 @@
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     /* Type Checking */
     "strict": true /* Enable all strict type-checking options. */,
-    // "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied `any` type.. */
+    "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied `any` type.. */,
     // "strictNullChecks": true,                         /* When type checking, take into account `null` and `undefined`. */
     // "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
     // "strictBindCallApply": true,                      /* Check that the arguments for `bind`, `call`, and `apply` methods match the original function. */
     // "strictPropertyInitialization": true,             /* Check for class properties that are declared but not set in the constructor. */
-    // "noImplicitThis": true,                           /* Enable error reporting when `this` is given the type `any`. */
+    "noImplicitThis": true /* Enable error reporting when `this` is given the type `any`. */,
     // "useUnknownInCatchVariables": true,               /* Type catch clause variables as 'unknown' instead of 'any'. */
-    // "alwaysStrict": true,                             /* Ensure 'use strict' is always emitted. */
+    "alwaysStrict": false /* Ensure 'use strict' is always emitted. */,
     // "noUnusedLocals": true,                           /* Enable error reporting when a local variables aren't read. */
     // "noUnusedParameters": true,                       /* Raise an error when a function parameter isn't read */
     // "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
@@ -104,6 +105,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["./src"],
+  " ": ["./src/**/*"],
   "exclude": ["node_modules"]
 }
