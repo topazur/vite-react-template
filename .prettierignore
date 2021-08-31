@@ -18,6 +18,7 @@ yarn.lock
 node_modules
 .husky
 commitlint.config.js
+.commitlintrc.js
 .env
 .env.*
 .env.local

@@ -6,6 +6,7 @@ node_modules
 dist
 .husky
 commitlint.config.js
+.commitlintrc.js
 .env
 .env.*
 .env.local

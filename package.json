@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky install",
     "tsc:init": "tsc --init",
     "svgo": "svgo -f src/icons",
     "readme:v1": "echo 'react 相关命令'",
@@ -22,6 +23,8 @@
     "react-router-dom": "^5.2.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@types/node": "^16.7.6",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
@@ -30,10 +33,13 @@
     "@typescript-eslint/parser": "^4.29.3",
     "@vitejs/plugin-react-refresh": "^1.3.6",
     "babel-eslint": "^10.1.0",
+    "commitizen": "^4.2.4",
     "eslint": "^7.32.0",
     "eslint-config-alloy": "^4.2.0",
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-react": "^7.25.1",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
@@ -48,5 +54,11 @@
     "ie >= 10",
     "iOS >= 8",
     "Android >= 4"
-  ]
+  ],
+  "lint-staged": {
+    "src/**/*{js,jsx,ts,tsx,md,html}": [
+      "npm run eslint",
+      "git add"
+    ]
+  }
 }
