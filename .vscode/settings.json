@@ -25,6 +25,7 @@
     "codepaths",
     "commitlint",
     "esbuild",
+    "extralight",
     "fastclick",
     "performant",
     "transpiled",

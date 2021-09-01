@@ -18,8 +18,10 @@
     "prettier:fix": "prettier --write -l \"./**/*\""
   },
   "dependencies": {
+    "antd-mobile": "^5.0.0-beta.1",
     "react": "^18.0.0-alpha-8723e772b-20210826",
     "react-dom": "^18.0.0-alpha-8723e772b-20210826",
+    "react-router-config": "^5.1.1",
     "react-router-dom": "^5.2.1"
   },
   "devDependencies": {
@@ -28,6 +30,7 @@
     "@types/node": "^16.7.6",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
+    "@types/react-router-config": "^5.0.3",
     "@types/react-router-dom": "^5.1.8",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
@@ -39,6 +42,7 @@
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-react": "^7.25.1",
     "husky": "^7.0.2",
+    "less": "^4.1.1",
     "lint-staged": "^11.1.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.3.2",
@@ -52,8 +56,8 @@
     "> 0.5%",
     "last 2 versions",
     "ie >= 10",
-    "iOS >= 8",
-    "Android >= 4"
+    "iOS >= 10",
+    "Android >= 5"
   ],
   "lint-staged": {
     "src/**/*{js,jsx,ts,tsx,md,html}": [

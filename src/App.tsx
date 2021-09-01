@@ -1,17 +1,13 @@
 import React from 'react'
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
-import Home from '@/views/Home'
+import { HashRouter as Router } from 'react-router-dom'
+import { renderRoutes } from 'react-router-config'
+import routes from '@/components/router'
 
 function App() {
+  /* renderRoutes(routes)会把routers作为props传入到Root根组件中 */
   return (
     <Router>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-      </ul>
-
-      <Route path="/" component={Home} />
+      <div className="vite-page w-full pt-50">{renderRoutes(routes)}</div>
     </Router>
   )
 }
